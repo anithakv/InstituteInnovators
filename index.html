@@ -1,0 +1,344 @@
+<!-- Your HTML file -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Add this line -->
+    <title>InstituteInnovators</title>
+</head>
+<body>
+
+<header>
+    <h1>InstituteInnovators</h1>
+    <p>Delivering quality services for your projects</p>
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search projects...">
+    <span class="search-icon" id="searchButton" onclick="searchButtonClick()">&#128269;</span>
+</div>
+
+
+</header>
+<!-- Existing code in the navigation section -->
+
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+    </ul>
+</nav>
+<!-- Add this inside your <body> tag -->
+
+<div class="overlay">
+    <div class="project-category-popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <div id="projectCardsContainer" class="project-cards-container"></div>
+    </div>
+</div>
+
+<main>
+    <section id="home" class="projects">
+        <!-- Home Section Content -->
+        <h2>Welcome to InstituteInnovators</h2>
+        <p>Explore our diverse range of projects and services.</p>
+        <div class="project-categories">
+            <button onclick="showProjects('webDevelopment')">Web Development</button>
+            <button onclick="showProjects('machineLearning')">Machine Learning</button>
+            <button onclick="showProjects('mobileAppDevelopment')">Mobile App Development</button>
+            <button onclick="showProjects('gameDevelopment')">Game Development</button>
+            <button onclick="showProjects('networkingSecurity')">Networking and Security</button>
+            <button onclick="showProjects('softwareEngineering')">Software Engineering</button>
+            <button onclick="showProjects('artificialIntelligence')">Artificial Intelligence</button>
+            <!-- Add buttons for other project categories -->
+        </div>
+
+ 
+
+
+        <!-- Project Categories -->
+        <div id="webDevelopment" class="project-category hidden">
+            <h2>Web Development Projects</h2>
+            
+           <div class="project-cards-container"></div>
+                <div class="project-card">
+                    <h3>Personal Portfolio</h3>
+                    <p>Showcase your skills, projects, and resume.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Blog or CMS</h3>
+                    <p>Develop a platform for blogging.</p>
+                </div>
+                <div class="project-card">
+                    <h3>E-commerce Website</h3>
+                    <p>Implement an online store with payment integration.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Social Media Dashboard</h3>
+                    <p>Build a tool to aggregate social media feeds.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Forum or Community Platform</h3>
+                    <p>Create a space for discussions.</p>
+                </div>
+            </div>
+
+            <div id="machineLearning" class="project-category hidden">
+                <h2>Machine Learning and Data Science Projects</h2>
+                <div class="project-cards-container"></div>
+                <div class="project-card">
+                    <h3>Predictive Analytics</h3>
+                    <p>Develop models for predicting future trends.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Image Recognition</h3>
+                    <p>Create an application that recognizes objects in images.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Sentiment Analysis</h3>
+                    <p>Analyze and categorize sentiments from user reviews.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Recommendation System</h3>
+                    <p>Build a system that suggests items based on user preferences.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Fraud Detection</h3>
+                    <p>Implement algorithms to detect fraudulent activities.</p>
+                </div>
+            </div>
+
+            <div id="mobileAppDevelopment" class="project-category hidden">
+                <h2>Mobile App Development Projects</h2>
+                <div class="project-cards-container"></div>
+                <div class="project-card">
+                    <h3>Android or iOS App</h3>
+                    <p>Develop a mobile application for a specific purpose.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Health and Fitness Tracker</h3>
+                    <p>Create an app to monitor health metrics.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Expense Tracker</h3>
+                    <p>Build an app to manage personal finances.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Task Management</h3>
+                    <p>Develop a to-do list or task management app.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Augmented Reality (AR) App</h3>
+                    <p>Implement an app with AR features.</p>
+                </div>
+            </div>
+
+            <div id="gameDevelopment" class="project-category hidden">
+                <h2>Game Development Projects</h2>
+                <div class="project-cards-container"></div>
+                <div class="project-card">
+                    <h3>2D or 3D Game</h3>
+                    <p>Create an interactive and engaging game.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Puzzle Game</h3>
+                    <p>Develop a game that challenges the mind.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Educational Game</h3>
+                    <p>Build a game that teaches specific concepts.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Multiplayer Game</h3>
+                    <p>Implement a game that allows multiple players.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Virtual Reality (VR) Game</h3>
+                    <p>Explore VR technologies for gaming.</p>
+                </div>
+            </div>
+
+            <div id="networkingSecurity" class="project-category hidden">
+                <h2>Networking and Security Projects</h2>
+                <div class="project-cards-container"></div>
+                <div class="project-card">
+                    <h3>Network Monitoring Tool</h3>
+                    <p>Create a tool to monitor network activities.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Intrusion Detection System (IDS)</h3>
+                    <p>Implement a system to detect security breaches.</p>
+                </div>
+                <div class="project-card">
+                    <h3>VPN (Virtual Private Network)</h3>
+                    <p>Develop a secure communication channel.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Password Manager</h3>
+                    <p>Build a tool for secure password management.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Firewall Configuration Tool</h3>
+                    <p>Create a user-friendly interface for configuring firewalls.</p>
+                </div>
+            </div>
+
+            <div id="softwareEngineering" class="project-category hidden">
+                <h2>Software Engineering Projects</h2>
+                <div class="project-cards-container"></div>
+                <div class="project-card">
+                    <h3>Bug Tracking System</h3>
+                    <p>Develop a system to track and manage software bugs.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Version Control System Integration</h3>
+                    <p>Implement integration with Git or other VCS.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project Management Tool</h3>
+                    <p>Create a tool to manage software development projects.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Continuous Integration (CI) Pipeline</h3>
+                    <p>Set up a CI/CD pipeline for automated testing and deployment.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Code Review Platform</h3>
+                    <p>Build a platform for collaborative code reviews.</p>
+                </div>
+            </div>
+
+            <div id="artificialIntelligence" class="project-category hidden">
+                <h2>Artificial Intelligence (AI) Projects</h2>
+                <div class="project-cards-container"></div>
+                <div class="project-card">
+                    <h3>Natural Language Processing (NLP)</h3>
+                    <p>Develop applications with language understanding capabilities.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Chatbot</h3>
+                    <p>Create a conversational agent for customer support or information retrieval.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Speech Recognition</h3>
+                    <p>Build a system that recognizes spoken words.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Generative Adversarial Network (GAN)</h3>
+                    <p>Explore image generation using GANs.</p>
+                </div>
+                <div class="project-card">
+                    <h3>AI-based Recommendation System</h3>
+                    <p>Implement personalized recommendations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="projects">
+            <!-- About Us Section Content -->
+            <h2>Assistance we offer</h2>
+            
+            <p>InstituteInnovators offers a diverse array of projects catering to various domains. In Web Development, projects like the "Personal Portfolio" and "E-commerce Website" allow individuals to showcase skills and build online stores with ease. Machine Learning projects delve into "Predictive Analytics" and "Image Recognition," employing cutting-edge technology for future trend prediction and object identification. Mobile App Development introduces apps like "Health and Fitness Tracker" and "Augmented Reality (AR) App" for health monitoring and immersive experiences. Game Development offers interactive experiences, including "Puzzle Game" and "Virtual Reality (VR) Game." Networking and Security projects focus on tools like "Intrusion Detection System" and "Firewall Configuration" for robust network protection. Software Engineering projects encompass tools like "Bug Tracking System" and "Continuous Integration (CI) Pipeline" for efficient software development. Lastly, Artificial Intelligence projects, such as "Chatbot" and "Generative Adversarial Network (GAN)," pioneer advancements in language processing and image generation, providing innovative solutions for a tech-driven future.</p>
+            <!-- Add more content for the about section -->
+        </section>
+    </main>
+
+   
+<footer>
+    <p>&copy; 2024 InstituteInnovators. All rights reserved.</p>
+</footer>
+
+
+<script>
+    
+    
+    function showProjects(category) {
+        var projectCategory = document.getElementById(category);
+        var projectCardsContainer = document.getElementById('projectCardsContainer');
+
+        // Clear the project cards container
+        projectCardsContainer.innerHTML = '';
+
+        // Display individual project cards
+        var projectCards = projectCategory.querySelectorAll('.project-card');
+        projectCards.forEach(function (card) {
+            var projectName = card.querySelector('h3').innerText;
+            var projectDescription = card.querySelector('p').innerText;
+
+            // Create individual project cards in the popup
+            var projectCard = document.createElement('div');
+            projectCard.classList.add('project-card');
+            projectCard.innerHTML = `
+                <h3>${projectName}</h3>
+                <p>${projectDescription}</p>`;
+            
+            // Make the project card clickable
+            projectCard.addEventListener('click', function () {
+                // Open Gmail compose box with the email address
+                window.location.href = 'mailto:instituteinnovators@gmail.com';
+
+                // Add the 'clicked' class to the clicked card
+                projectCard.classList.add('clicked');
+            });
+
+            // Append the project card to the container
+            projectCardsContainer.appendChild(projectCard);
+        });
+
+        // Show the overlay and project category block
+        var overlay = document.querySelector('.overlay');
+        var projectCategoryPopup = document.querySelector('.project-category-popup');
+        overlay.style.display = 'flex';
+        projectCategoryPopup.style.display = 'block';
+    }
+
+    function closePopup() {
+        var overlay = document.querySelector('.overlay');
+        var projectCategoryPopup = document.querySelector('.project-category-popup');
+        overlay.style.display = 'none';
+        projectCategoryPopup.style.display = 'none';
+    }
+
+    // Add the search functionality script as you did in the original code
+
+    // Function to handle search button click
+
+    // Function to handle search button click
+   // Function to handle search button click
+function searchButtonClick() {
+    var searchInput = document.getElementById('searchInput');
+    var searchKeyword = searchInput.value.toLowerCase();
+    var matchFound = false;
+
+    // Loop through all project and subproject names and scroll to the first match
+    var subprojectCards = document.querySelectorAll('.big-square-block');
+    subprojectCards.forEach(function (subprojectCard) {
+        var subprojectName = subprojectCard.querySelector('h3').innerText.toLowerCase();
+        var subprojectDescription = subprojectCard.querySelector('p').innerText.toLowerCase();
+
+        // Check if the subproject name or description contains the search keyword
+        if (subprojectName.includes(searchKeyword) || subprojectDescription.includes(searchKeyword)) {
+            // Scroll to the subproject card
+            window.scrollTo({
+                top: subprojectCard.offsetTop,
+                behavior: 'smooth'
+            });
+            matchFound = true;
+        }
+    });
+
+    // Display a message if no match is found
+    if (!matchFound) {
+        alert('No matching projects found.');
+    }
+}
+
+// Add event listener for search button click
+document.getElementById('searchButton').addEventListener('click', searchButtonClick);
+
+
+</script>
+
+
+</body>
+</html>

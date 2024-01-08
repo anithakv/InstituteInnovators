@@ -1,0 +1,324 @@
+/* styles.css *//* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    background-repeat: no-repeat;
+    background-size: cover; /* Adjust to cover or contain based on your preference */
+    color: #fff; /* Default text color */
+}
+
+header, nav, main, section, footer {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black */
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ... (your existing styles) */
+
+.projects {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black */
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    color: #fff; /* Set text color to contrast with the background */
+}
+
+/* ... (your existing styles) */
+
+/* Style for the about section */
+
+
+/* ... (your existing styles) */
+
+
+header h1 {
+    font-size: 2.5em;
+    color: #3498db;
+}
+
+
+nav {
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color:0 0 5px rgba(0, 0, 0, 0.2); /* Transparent black */
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+nav li {
+    margin-right: 20px;
+    color: #fff;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+
+
+
+
+
+.project-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.project-category {
+    margin-top: 20px;
+    display: none;
+}
+
+
+.subproject-card {
+    background-color: #ecf0f1;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.subproject-card:hover {
+    background-color: #d4e6f1;
+}
+
+.notification {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 20px;
+    display: none;
+}
+
+.notification-content {
+    text-align: left;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #7f8c8d;
+}
+
+
+/* Add these styles to your styles.css */
+
+
+/* Style for the overlay background */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Style for the project category block */
+
+
+/* Style for closing the project category block */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Style for the project cards inside the block */
+
+
+/* Add any additional styles as needed */
+
+.hidden {
+    display: none;
+}
+
+/* Add your other styles here... */
+
+/* Header styles */
+
+
+/* Search input styles */
+
+
+/* Your existing styles... */
+
+
+/* Add your other styles here... */
+
+/* Header styles */
+
+/* Header styles */
+header {
+    background-color: #000; /* Set to the same color as project cards */
+    color: #fff; /* Text color for the header */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header content styles */
+.header-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Search container styles */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Search input styles */
+#searchInput {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px; /* Add some space between input and icon */
+    width: 200px; /* Adjust the width as needed */
+}
+
+/* Search icon styles */
+.search-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Header content styles */
+
+/* Search container styles */
+
+
+/* Your existing styles... */
+/* Add these styles to your existing CSS file */
+
+/* Add these styles to your existing CSS file */
+
+/* Add these styles to your existing CSS file */
+
+/* Add these styles to your existing CSS file */
+
+/* Add these styles to your existing CSS file */
+
+/* Add these styles to your existing CSS file */
+
+.project-category-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.project-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%; /* Set height to 100% to center vertically */
+}
+
+.project-card {
+    width: 300px;
+    background-color: #000;
+    color: #fff;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.project-card p {
+    font-size: 14px;
+}
+
+.project-card.clicked h3 {
+    color: #3498db;
+}
+
+/* Add these styles to your existing CSS file */
+
+/* Style for the about section */
+#about {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black */
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    margin: 20px;
+    color: #fff; /* Set text color to contrast with the background */
+}
+
+#about h2 {
+    font-size: 2em;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2em;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Add any additional styles as needed */
+
